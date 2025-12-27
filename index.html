@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Birthday Countdown 💖</title>
-    <link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Font (Cursive Letter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<div class="hearts"></div>
+<!-- STARS -->
+<div class="stars"></div>
+
+<!-- POLAROIDS -->
+<div class="polaroids left">
+    <img src="polaroids/p1.jpg">
+    <img src="polaroids/p2.jpg">
+</div>
+
+<div class="polaroids right">
+    <img src="polaroids/p3.jpg">
+    <img src="polaroids/p4.jpg">
+</div>
 
 <div class="container">
-    <h1>💖 meraa pretty lil babeee 💖</h1>
 
+    <h1>💖 MERA CUTIEE BACHAAA 💖</h1>
+
+    <!-- COUNTDOWN -->
     <div id="countdown">
         <div class="time-box"><span id="days">0</span><small>Days</small></div>
         <div class="time-box"><span id="hours">0</span><small>Hours</small></div>
@@ -21,26 +38,37 @@
         <div class="time-box"><span id="seconds">0</span><small>Seconds</small></div>
     </div>
 
-    <div id="message" class="hidden">
-        <h2>🎂🎉 HAPPY BIRTHDAY MY LOVE 🎉🎂</h2>
-        <p>
-            You are my smile,<br>
-            my peace,<br>
-            my forever ❤️<br><br>
-            I LOVE YOU ENDLESSLY 💞
-        </p>
-    </div>   <!-- message end -->
+    <!-- MUSIC -->
+    <button onclick="playMusic()">🎶 Play Our Song</button>
+    <audio id="music" loop>
+        <source src="music/belongs-together.mp3" type="audio/mpeg">
+    </audio>
 
-    <div class="slideshow hidden">
-    <img id="slideImage" src="photos/photo1.jpg" alt="Our Memories">
-    <div id="caption">Our first beautiful memory ❤️</div>
+    <!-- MESSAGE -->
+    <div id="message" class="hidden">
+        <h2>🎂 HAPPY BIRTHDAY MY LOVE 🎂</h2>
     </div>
 
-    <button onclick="playMusic()">▶️ Play Music</button>
+    <!-- SLIDESHOW -->
+    <div class="slideshow hidden">
+        <img id="slideImage" src="photos/photo1.jpeg">
+        <div id="caption">Our first memory ❤️</div>
+    </div>
 
-    <audio id="music" loop>
-        <source src="BelongsTogether.mp3.mp3" type="audio/mpeg">
-    </audio>
+    <!-- LETTER BUTTON -->
+    <button id="letterBtn" class="hidden" onclick="openLetter()">💌 Open My Letter</button>
+
+    <!-- LETTER -->
+    <div id="letter" class="letter hidden">
+        <p>
+            My love,<br><br>
+            Every moment with you feels like magic.
+            You are my comfort, my happiness, my forever.
+            I promise to love you more with every heartbeat.<br><br>
+            Happy Birthday, my cutiee bachaaa 💞
+        </p>
+    </div>
+
 </div>
 
 <script src="script.js"></script>
